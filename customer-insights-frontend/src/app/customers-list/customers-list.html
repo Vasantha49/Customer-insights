@@ -1,0 +1,11 @@
+<tr *ngFor="let c of customers">
+  <td>{{ c.firstName }}</td>
+  <td>{{ c.lastName }}</td>
+  <td>{{ c.email }}</td>
+  <td>{{ c.phoneNumber }}</td>
+  <td>{{ c.riskCategory }}</td>
+  <td>
+    <button (click)="edit(c.id!)">Edit</button>
+    <button (click)="delete(c.id!)">Delete</button>
+  </td>
+</tr>

@@ -1,0 +1,23 @@
+<h2>Add Customer</h2>
+
+<form (ngSubmit)="save()">
+  <label>First Name</label>
+  <input [(ngModel)]="customer.firstName" name="firstName" required>
+
+  <label>Last Name</label>
+  <input [(ngModel)]="customer.lastName" name="lastName" required>
+
+  <label>Email</label>
+  <input [(ngModel)]="customer.email" name="email" required>
+
+  <label>Phone</label>
+  <input [(ngModel)]="customer.phoneNumber" name="phoneNumber" required>
+
+  <label>Date of Birth</label>
+  <input type="date" [(ngModel)]="customer.dateOfBirth" name="dob" required>
+
+  <label>Risk Category</label>
+  <input [(ngModel)]="customer.riskCategory" name="risk" required>
+
+  <button type="submit">Save</button>
+</form>
