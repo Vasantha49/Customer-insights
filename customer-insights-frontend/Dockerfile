@@ -5,8 +5,11 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 
+# Install Angular CLI inside the container
+RUN npm install -g @angular/cli
+
 COPY . .
-RUN npm run build --configuration=production
+RUN ng build --configuration=production
 
 # Stage 2: Serve with NGINX
 FROM nginx:alpine
